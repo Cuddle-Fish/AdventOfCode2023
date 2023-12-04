@@ -9,7 +9,8 @@ BLUE_CUBES = 14
 
 validIdSum = 0
 for game in lines:
-  game = game[:len(game) - 1]
+  if game[len(game) - 1] == '\n':
+    game = game[:len(game) - 1]
   gameNum, rounds = game.split(": ", 1)
   gameNum = int(gameNum[5:])
   rounds = rounds.split("; ")
@@ -37,14 +38,13 @@ print(validIdSum)
 # Part 2
 totalPower = 0
 for game in lines:
-  game = game[:len(game) - 1]
+  if game[len(game) - 1] == '\n':
+    game = game[:len(game) - 1]
   gameNum, rounds = game.split(": ", 1)
-  gameNum = int(gameNum[5:])
   rounds = rounds.split("; ")
   minRed = 0
   minGreen = 0
   minBlue = 0
-  isValid = True
   for round in rounds:
     cubes = round.split(", ")
     for cube in cubes:
