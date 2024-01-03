@@ -1,5 +1,4 @@
 FILENAME = "data/day05.txt"
-# FILENAME = 'test.txt'
 
 class conversionVals:
   def __init__(self, dest, src, range):
