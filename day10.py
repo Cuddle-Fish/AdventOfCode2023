@@ -1,5 +1,4 @@
 FILENAME = 'data/day10.txt'
-# FILENAME = 'test.txt'
 
 def removeExterior(path, numRows, numColumns):
   tileRemoved = False
